@@ -1,10 +1,28 @@
+import userData from '../fixtures/users/userData.json';
+import HomePage from '../pages/homePage';
+import Navbar from '../pages/navbar';
+import RegisterUserPage from '../pages/registerUserPage';
+
+const homePage = new HomePage()
+const navbar = new Navbar()
+const registerUserPage = new RegisterUserPage()
+
+before(() => {
+    registerUserPage.RegisterAdminUser(userData.userAdmin.name, userData.userAdmin.email, userData.userAdmin.password)
+})
+
 beforeEach(() => {
-    cy.login('test-bootcamp@email.com', '1234')
+    cy.login(userData.userAdmin.email, userData.userAdmin.password)
 })
 
 describe('Feature Product' , () => {
     let product1 = 'Bolinha' + Math.random()
     let product2 = 'Caneca' + Math.random()
+
+    // it.only('Test', () => {
+    //     homePage.accessHomePage()
+    //     navbar.registerProductPage()
+    // })
 
     it('Fluxo de CRUD de produto', () => {
         cy.visit('https://front.serverest.dev/admin/home')

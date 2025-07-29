@@ -1,0 +1,7 @@
+{
+    "userAdmin": {
+        "name": "Test",
+        "email": "test-admin@email.com",
+        "password": "012345"
+    }
+}
