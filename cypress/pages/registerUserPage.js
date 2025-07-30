@@ -5,7 +5,8 @@ class RegisterUserPage{
             emailField: "[data-testid='email']",
             passwordField: "[data-testid='password']",
             adminCheckbox: "[data-testid='checkbox']",
-            registerButton: "[data-testid='cadastrar']"
+            registerButton: "[data-testid='cadastrar']",
+            homePageDisplay: "#root"
         }
 
         return selectors
@@ -17,6 +18,8 @@ class RegisterUserPage{
         cy.get(this.selectorsList().passwordField).type(password)
         cy.get(this.selectorsList().adminCheckbox).click()
         cy.get(this.selectorsList().registerButton).click()
+        cy.get(this.selectorsList().homePageDisplay)
+
     }
     RegisterNonAdminUser() {
         cy.visit('https://front.serverest.dev/cadastrarusuarios')
@@ -24,6 +27,7 @@ class RegisterUserPage{
         cy.get(this.selectorsList().emailField).type(email)
         cy.get(this.selectorsList().passwordField).type(password)
         cy.get(this.selectorsList().registerButton).click()
+        cy.get(this.selectorsList().homePageDisplay)
     }
 
 }
