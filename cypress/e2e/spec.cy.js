@@ -10,18 +10,21 @@ const navbar = new Navbar()
 const registerUserPage = new RegisterUserPage()
 const registerProductPage = new RegisterProductsPage()
 
+let adminAccount = userData.userAdmin
+
 before(() => {
-    registerUserPage.registerAdminUser(userData.userAdmin.name, userData.userAdmin.email, userData.userAdmin.password)
+    registerUserPage.registerAdminUser(adminAccount.name, adminAccount.email, adminAccount.password)
 })
 
 beforeEach(() => {
-    cy.login(userData.userAdmin.email, userData.userAdmin.password)
+    cy.login(adminAccount.email, adminAccount.password)
 })
 
 describe('Feature Product' , () => {
     it('Fluxo CRUD do produto', () => {
+        let product = newProduct.randomProduct
         homePage.accessHomePage()
         navbar.registerProductPage()
-        registerProductPage.registerNewProduct(newProduct.randomProduct.name, newProduct.randomProduct.price, newProduct.randomProduct.description, newProduct.randomProduct.quantity)
+        registerProductPage.registerNewProduct(product.name, product.price, product.description, product.quantity)
     })
 })
