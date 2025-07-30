@@ -14,7 +14,7 @@ class Navbar{
     }
 
     registerProductPage(){
-        cy.get(this.selectorsList().registerProductNav)
+        cy.get(this.selectorsList().registerProductNav).click()
     }
 }
 

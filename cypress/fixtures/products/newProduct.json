@@ -1,7 +1,8 @@
 {
     "randomProduct": {
-        "nome": "",
-        "preco": "",
-        "descricao": ""
+        "name": "Bolinha",
+        "price": "2",
+        "description": "Bolinha de Gude",
+        "quantity": "10"
     }
 }
