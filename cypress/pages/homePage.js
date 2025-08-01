@@ -14,10 +14,6 @@ class HomePage {
     accessHomePage() {
         cy.visit('https://front.serverest.dev/admin/home')
     }
-    registerProductPage(){
-        cy.get(navbar().registerProductNav)
-    }
-
 }
 
 export default HomePage

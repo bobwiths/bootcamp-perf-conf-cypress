@@ -21,7 +21,7 @@ class RegisterUserPage{
         cy.get(this.selectorsList().homePageDisplay)
 
     }
-    registerNonAdminUser() {
+    registerNonAdminUser(name, email, password) {
         cy.visit('https://front.serverest.dev/cadastrarusuarios')
         cy.get(this.selectorsList().nameField).type(name)
         cy.get(this.selectorsList().emailField).type(email)
