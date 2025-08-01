@@ -6,7 +6,7 @@ class RegisterUserPage{
             passwordField: "[data-testid='password']",
             adminCheckbox: "[data-testid='checkbox']",
             registerButton: "[data-testid='cadastrar']",
-            homePageDisplay: "#root"
+            homePageDisplay: ".alert"
         }
 
         return selectors

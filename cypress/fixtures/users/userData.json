@@ -1,7 +1,7 @@
 {
     "userAdmin": {
         "name": "Test",
-        "email": "test-admin@email.com",
+        "email": "qatest-admin@1email.com",
         "password": "012345"
     }
 }
