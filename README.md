@@ -6,6 +6,8 @@ Após a finalização do *bootcamp*, o código todo estava dentro da ***spec.cy.
 
 Utilizei uma variável para reduzir a chamada de: ***userData.userAdmin***, sendo necessário apenas digitar ***adminAccount***, e também adicionei outra variável para reduzir a chamada de: ***newProduct.randomProduct***, sendo necessário apenas digitar ***product***,  facilitando também a leitura do código e chamada das variáveis dentro do ***userData.json*** e ***newProduct***(respectivamente). 
 
+Adicionei ainda o CI, através do GitHub Actions, para que os testes sejam realizados pelo próprio GitHub, facilitando assim a visão dos demais integrantes do time sobre os testes realizados pelo QA. Na configuração do CI, coloquei para que sempre que seja realizado o git push ao repositório, seja realizado os testes, isso pode facilitar também ao QA, para verificar quais testes estão passando em qual build, e caso não esteja passando mais em algum teste, facilita ainda mais o trabalho, pois será automaticamente reportado pelo GitHub.
+
 ## Sobre o intuito deste teste:
 
 O intuito deste teste é realizar o cadastro de um usuário como administrador, sendo realizado (*front-end*) e utilizando o **before** (antes de tudo), pegar o ***token*** gerado pelo usuário (*back-end*) e utilizar o token ao invés de realizar o **login** e aguardar uma reposta na parte **front-end**, sendo necessário apenas aguardar o tempo da **API** verificar se o token está correto.
