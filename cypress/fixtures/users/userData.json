@@ -1,7 +1,12 @@
 {
     "userAdmin": {
-        "name": "Test",
-        "email": "qatest-admin@1email.com",
-        "password": "012345"
+        "name": "test",
+        "email": "qatestadmin@1email.com",
+        "password": "0123456"
+    },
+    "userNonAdmin": {
+        "name": "nonAdmin",
+        "email": "nonadmin@maybeoneday.gg",
+        "password": "futureisuptous123"
     }
 }

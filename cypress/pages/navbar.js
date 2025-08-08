@@ -16,6 +16,9 @@ class Navbar{
     registerProductPage(){
         cy.get(this.selectorsList().registerProductNav).click()
     }
+    registerUserPage(){
+        cy.get(this.selectorsList().registerUserNav).click()
+    }
 }
 
 export default Navbar

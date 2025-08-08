@@ -17,7 +17,7 @@ class RegisterProductsPage{
         cy.get(this.selectorsList().productDescription).type(description)
         cy.get(this.selectorsList().productQuantity).type(quantity)
         cy.get(this.selectorsList().registerProductButton).click()
-        cy.get('h1'). contains('Lista dos Produtos')
+        cy.get('h1').contains('Lista dos Produtos')
         cy.get('tbody').should('be.visible')
         cy.get('td').should('include.text', name)
         cy.get('tr').each(($row) => {
