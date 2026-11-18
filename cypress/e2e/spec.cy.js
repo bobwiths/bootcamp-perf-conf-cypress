@@ -35,4 +35,10 @@ describe('Feature Product' , () => {
         navbar.registerUserPage()
         registerUserAdminPage.registerNonAdminUser(nonAdminUser.name, nonAdminUser.email, nonAdminUser.password)
     })
+    it.skip('Fluxo CRUD do admin', () => {
+        let adminUser = userData.userAdmin
+        homePage.accessHomePage()
+        navbar.registerUserPage()
+        registerUserAdminPage.registerAdminUser(adminUser.name, adminUser.email, adminUser.password)
+    })
 })

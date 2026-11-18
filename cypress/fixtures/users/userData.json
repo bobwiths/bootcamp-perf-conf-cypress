@@ -5,8 +5,8 @@
         "password": "0123456"
     },
     "userNonAdmin": {
-        "name": "nonAdmin",
-        "email": "nonadmin@maybeoneday.gg",
+        "name": "userNonAdmin",
+        "email": "usernonadmin@useremail.com",
         "password": "futureisuptous123"
     }
 }
